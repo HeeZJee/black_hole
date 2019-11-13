@@ -19,18 +19,21 @@ if d_unit == 'au' or d_unit == 'AU':
     r_appiAU = dec( input("Enter radius at apustron: ")) #1800
     r_appi = dec(r_appiAU*149597900000)
     r_peri = dec(r_periAU*149597900000)
-elif d_unit  == 'meters' or d_unit == 'meter' or d_unit == 'm' :
+elif d_unit  == 'metemrs' or d_unit == 'meter' or d_unit == 'm' :
     r_appi = dec( input("Enter radius at apustron: "))
     r_peri = dec( input("Enter radius at periastron: "))
 else:
-    print("Invalid unit") 
+    print("Invalid Unit") 
 
-#t_unit = input('Enter unit for time period')
-#if t_unit == 'years' or t == 'year' or t == 'yrs' or t == 'yr':
-t_yr = dec( input("Enter orbital period: ")) #491961600
-t = dec(t_yr*dec(sc.year))
-
-
+t_unit = input('Enter unit for time period')
+if t_unit == 'years' or t_unit == 'year' or t_unit == 'yrs' or t_unit == 'yr':
+    t_yr = dec( input("Enter orbital period: ")) #15.6
+    t = t_yr*dec(sc.year)
+elif t_unit == 'sec' or t_unit   == "seconds" or t_unit == 's':
+    t_yr = dec( input("Enter orbital period: ")) #491961600
+    t = dec(t_yr)
+else:
+    print("Invalid Unit")
 
 
 mass1= pow(pi,2)*pow(r_appi+r_peri,3)
