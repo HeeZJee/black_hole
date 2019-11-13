@@ -18,7 +18,7 @@ h_bar = sc.hbar
 Boltzmann_constant = sc.Boltzmann
 k = dec(Boltzmann_constant)
 
-
+#--------------------------------------------------------------------------------------------------------
 d_unit = input('which unit you will like to you use \nAU or meters?\n')
 
 if d_unit == 'au' or d_unit == 'AU':
@@ -54,6 +54,7 @@ mass_of_sun = dec(m_sun)
 solar_mass = dec(mass/mass_of_sun)
 print('\nIts equal to %s solar masses.'%solar_mass)
 
+#---------------------------------------------------------------------------------------------------------------
 v1_peri = dec((2*G*mass*r_appi))
 v2_peri = dec(r_appi*r_peri+pow(r_peri,2))
 v_peri = dec(m.sqrt(v1_peri/v2_peri))
